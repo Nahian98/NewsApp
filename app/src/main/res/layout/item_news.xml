@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.MaterialComponents.CardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/_20sdp"
+    app:cardElevation="4dp"
+    app:cardPreventCornerOverlap="false"
+    app:strokeColor="@color/white"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.MaterialComponents.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_rectangle_13"
+            app:strokeColor="@color/white"
+            android:focusable="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/ivImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_200sdp"
+                    android:scaleType="centerCrop"
+                    tools:ignore="MissingConstraints"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_image_shape"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivImage"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_18sdp"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="0dp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/llNewsSourceTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/tvNewsTitle"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/tvSourceName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="8dp"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:fontFamily="@font/inter_medium"
+                            android:text="Breaking News"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/_12sdp"
+                            android:layout_weight="1.4"/>
+
+                        <TextView
+                            android:id="@+id/tvPublishTime"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="8dp"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:fontFamily="@font/inter_medium"
+                            android:text="Breaking News"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/_10sdp"
+                            android:layout_weight="1"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <TextView
+                        android:id="@+id/tvNewsTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextHeaderSemiBold"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="8dp"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:fontFamily="@font/inter_medium"
+                        android:text="Breaking News"
+                        android:ellipsize="end"
+                        android:minLines="1"
+                        android:maxLines="2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/llNewsSourceTime"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/_18sdp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
